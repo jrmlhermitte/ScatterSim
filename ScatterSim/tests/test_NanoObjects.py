@@ -1,4 +1,4 @@
-from ..NanoObjects import SphereNanoObject
+from ScatterSim.models.nano_objects.sphere import SphereNanoObject
 import numpy as np
 
 from nose.tools import assert_raises
