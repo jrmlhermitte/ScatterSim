@@ -27,7 +27,9 @@ class PyramidNanoObject(NanoObject):
     doi:10.1107/S0021889802006088
     """
 
-    def __init__(self, pargs={}):
+    def __init__(self, pargs=None):
+        if pargs is None:
+            pargs = {}
         super(PyramidNanoObject, self).__init__(pargs=pargs)
 
         # defaults

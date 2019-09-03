@@ -1,4 +1,5 @@
 import numpy as np
+import scipy.special as scipy_special
 
 from ScatterSim.NanoObjects import NanoObject
 
@@ -86,7 +87,7 @@ class CylinderNanoObject(NanoObject):
         # NOTE : Numpy's sinc function adds
         # a factor of pi in we need to remove.
         # Why numpy... why??? ><
-        F = 2 * np.sinc(qz * H / 2. / np.pi) * j1(qr * R) / qr / R + 1j * 0
+        F = 2 * np.sinc(qz * H / 2. / np.pi) * scipy_special.j1(qr * R) / qr / R + 1j * 0
         F *= phase
         F *= self.pargs['delta_rho'] * volume
 
